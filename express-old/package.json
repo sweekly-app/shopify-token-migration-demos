@@ -1,0 +1,11 @@
+{
+  "name": "demo-express-old",
+  "private": true,
+  "version": "1.0.0",
+  "description": "BEFORE: an old-style Express Shopify app on non-expiring offline tokens. Do not deploy as is.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "express": "^4.21.2", "pg": "^8.13.1" },
+  "license": "MIT"
+}

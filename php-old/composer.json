@@ -1,0 +1,6 @@
+{
+  "name": "sweekly/demo-php-old",
+  "description": "BEFORE: a hand-rolled PHP Shopify app on non-expiring offline tokens. Do not deploy as is.",
+  "license": "MIT",
+  "require": { "php": ">=8.1", "ext-curl": "*", "ext-pdo": "*" }
+}

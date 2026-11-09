@@ -1,0 +1,10 @@
+{
+  "name": "sweekly/demo-php",
+  "description": "AFTER: the same hand-rolled PHP Shopify app migrated to expiring offline tokens.",
+  "license": "MIT",
+  "require": { "php": ">=8.1", "ext-curl": "*", "ext-pdo": "*" },
+  "scripts": {
+    "lint": "for f in src/*.php public/*.php scripts/*.php tests/*.php; do php -l $f || exit 1; done",
+    "test": "php tests/run.php"
+  }
+}

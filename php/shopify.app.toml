@@ -1,0 +1,27 @@
+# AFTER: same app, migrated. Replace the REPLACE_WITH_* values before `shopify app deploy`.
+client_id = "REPLACE_WITH_CLIENT_ID"
+name = "Token demo (PHP)"
+application_url = "https://REPLACE_WITH_HOST"
+embedded = false
+
+[access_scopes]
+scopes = "read_products"
+
+[auth]
+redirect_urls = ["https://REPLACE_WITH_HOST/auth/callback"]
+
+[network_access]
+# Origins the app's pages load from or call on Shopify pages. This app has no storefront or checkout code
+# and its admin page only talks to its own origin.
+allowed_sources = ["https://REPLACE_WITH_HOST"]
+
+[webhooks]
+api_version = "2026-10"
+
+  [[webhooks.subscriptions]]
+  topics = ["app/uninstalled"]
+  uri = "/webhooks"
+
+  [[webhooks.subscriptions]]
+  compliance_topics = ["customers/data_request", "customers/redact", "shop/redact"]
+  uri = "/webhooks"

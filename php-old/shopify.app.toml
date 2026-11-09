@@ -1,0 +1,22 @@
+# BEFORE: the state many hand-rolled apps are in today.
+client_id = "REPLACE_WITH_CLIENT_ID"
+name = "Token demo (PHP, before)"
+application_url = "https://REPLACE_WITH_HOST"
+embedded = false
+
+[access_scopes]
+scopes = "read_products"
+
+[auth]
+redirect_urls = ["https://REPLACE_WITH_HOST/auth/callback"]
+
+[webhooks]
+api_version = "2026-10"
+
+  [[webhooks.subscriptions]]
+  topics = ["app/uninstalled"]
+  uri = "/webhooks"
+
+  [[webhooks.subscriptions]]
+  compliance_topics = ["customers/data_request", "customers/redact", "shop/redact"]
+  uri = "/webhooks"
